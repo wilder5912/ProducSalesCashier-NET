@@ -1,0 +1,591 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="storeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="storeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="article" EntityType="storeModel.article" />
+    <EntitySet Name="articledetail" EntityType="storeModel.articledetail" />
+    <EntitySet Name="articlerelational" EntityType="storeModel.articlerelational" />
+    <EntitySet Name="banner" EntityType="storeModel.banner" />
+    <EntitySet Name="bestarticle" EntityType="storeModel.bestarticle" />
+    <EntitySet Name="box" EntityType="storeModel.box" />
+    <EntitySet Name="bussine" EntityType="storeModel.bussine" />
+    <EntitySet Name="comment" EntityType="storeModel.comment" />
+    <EntitySet Name="descriptionarticle" EntityType="storeModel.descriptionarticle" />
+    <EntitySet Name="groupproduct" EntityType="storeModel.groupproduct" />
+    <EntitySet Name="imagearticle" EntityType="storeModel.imagearticle" />
+    <EntitySet Name="information" EntityType="storeModel.information" />
+    <EntitySet Name="listproduct" EntityType="storeModel.listproduct" />
+    <EntitySet Name="reviewarticle" EntityType="storeModel.reviewarticle" />
+    <EntitySet Name="section" EntityType="storeModel.section" />
+    <EntitySet Name="stockarticle" EntityType="storeModel.stockarticle" />
+    <EntitySet Name="subsection" EntityType="storeModel.subsection" />
+    <EntitySet Name="user" EntityType="storeModel.user" />
+    <AssociationSet Name="FK_ARTICLED_RELATIONS_ARTICLE" Association="storeModel.FK_ARTICLED_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="articledetail" EntitySet="articledetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ARTICLER_RELATIONS_ARTICLE" Association="storeModel.FK_ARTICLER_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="articlerelational" EntitySet="articlerelational" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMENT_RELATIONS_ARTICLE" Association="storeModel.FK_COMMENT_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="comment" EntitySet="comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESCRIPT_RELATIONS_ARTICLE" Association="storeModel.FK_DESCRIPT_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="descriptionarticle" EntitySet="descriptionarticle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IMAGEART_RELATIONS_ARTICLE" Association="storeModel.FK_IMAGEART_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="imagearticle" EntitySet="imagearticle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMAT_RELATIONS_ARTICLE" Association="storeModel.FK_INFORMAT_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="information" EntitySet="information" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LISTPROD_RELATIONS_ARTICLE" Association="storeModel.FK_LISTPROD_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="listproduct" EntitySet="listproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REVIEWAR_RELATIONS_ARTICLE" Association="storeModel.FK_REVIEWAR_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="reviewarticle" EntitySet="reviewarticle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_STOCKART_RELATIONS_ARTICLE" Association="storeModel.FK_STOCKART_RELATIONS_ARTICLE">
+      <End Role="article" EntitySet="article" />
+      <End Role="stockarticle" EntitySet="stockarticle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ARTICLED_RELATIONS_SUBSECTI" Association="storeModel.FK_ARTICLED_RELATIONS_SUBSECTI">
+      <End Role="subsection" EntitySet="subsection" />
+      <End Role="articledetail" EntitySet="articledetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BANNER_RELATIONS_ARTICLED" Association="storeModel.FK_BANNER_RELATIONS_ARTICLED">
+      <End Role="articledetail" EntitySet="articledetail" />
+      <End Role="banner" EntitySet="banner" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BESTARTI_RELATIONS_ARTICLED" Association="storeModel.FK_BESTARTI_RELATIONS_ARTICLED">
+      <End Role="articledetail" EntitySet="articledetail" />
+      <End Role="bestarticle" EntitySet="bestarticle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ARTICLER_RELATIONS_BUSSINE" Association="storeModel.FK_ARTICLER_RELATIONS_BUSSINE">
+      <End Role="bussine" EntitySet="bussine" />
+      <End Role="articlerelational" EntitySet="articlerelational" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BOX_RELATIONS_BUSSINE" Association="storeModel.FK_BOX_RELATIONS_BUSSINE">
+      <End Role="bussine" EntitySet="bussine" />
+      <End Role="box" EntitySet="box" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BOX_RELATIONS_USER" Association="storeModel.FK_BOX_RELATIONS_USER">
+      <End Role="user" EntitySet="user" />
+      <End Role="box" EntitySet="box" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LISTPROD_RELATIONS_BOX" Association="storeModel.FK_LISTPROD_RELATIONS_BOX">
+      <End Role="box" EntitySet="box" />
+      <End Role="listproduct" EntitySet="listproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GROUPPRO_RELATIONS_BUSSINE" Association="storeModel.FK_GROUPPRO_RELATIONS_BUSSINE">
+      <End Role="bussine" EntitySet="bussine" />
+      <End Role="groupproduct" EntitySet="groupproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REVIEWAR_RELATIONS_BUSSINE" Association="storeModel.FK_REVIEWAR_RELATIONS_BUSSINE">
+      <End Role="bussine" EntitySet="bussine" />
+      <End Role="reviewarticle" EntitySet="reviewarticle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMMENT_RELATIONS_USER" Association="storeModel.FK_COMMENT_RELATIONS_USER">
+      <End Role="user" EntitySet="user" />
+      <End Role="comment" EntitySet="comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SECTION_RELATIONS_GROUPPRO" Association="storeModel.FK_SECTION_RELATIONS_GROUPPRO">
+      <End Role="groupproduct" EntitySet="groupproduct" />
+      <End Role="section" EntitySet="section" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SUBSECTI_RELATIONS_SECTION" Association="storeModel.FK_SUBSECTI_RELATIONS_SECTION">
+      <End Role="section" EntitySet="section" />
+      <End Role="subsection" EntitySet="subsection" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="article_id" />
+    </Key>
+    <Property Name="article_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_ar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="codigo_ar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="precy_ar" Type="Double" />
+    <Property Name="detail_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="image_main_ar" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="per_discount_ar" Type="Double" />
+    <Property Name="is_discount_ar" Type="Boolean" />
+    <Property Name="is_delete_ar" Type="Boolean" />
+    <NavigationProperty Name="articledetail" Relationship="storeModel.FK_ARTICLED_RELATIONS_ARTICLE" FromRole="article" ToRole="articledetail" />
+    <NavigationProperty Name="articlerelational" Relationship="storeModel.FK_ARTICLER_RELATIONS_ARTICLE" FromRole="article" ToRole="articlerelational" />
+    <NavigationProperty Name="comment" Relationship="storeModel.FK_COMMENT_RELATIONS_ARTICLE" FromRole="article" ToRole="comment" />
+    <NavigationProperty Name="descriptionarticle" Relationship="storeModel.FK_DESCRIPT_RELATIONS_ARTICLE" FromRole="article" ToRole="descriptionarticle" />
+    <NavigationProperty Name="imagearticle" Relationship="storeModel.FK_IMAGEART_RELATIONS_ARTICLE" FromRole="article" ToRole="imagearticle" />
+    <NavigationProperty Name="information" Relationship="storeModel.FK_INFORMAT_RELATIONS_ARTICLE" FromRole="article" ToRole="information" />
+    <NavigationProperty Name="listproduct" Relationship="storeModel.FK_LISTPROD_RELATIONS_ARTICLE" FromRole="article" ToRole="listproduct" />
+    <NavigationProperty Name="reviewarticle" Relationship="storeModel.FK_REVIEWAR_RELATIONS_ARTICLE" FromRole="article" ToRole="reviewarticle" />
+    <NavigationProperty Name="stockarticle" Relationship="storeModel.FK_STOCKART_RELATIONS_ARTICLE" FromRole="article" ToRole="stockarticle" />
+  </EntityType>
+  <EntityType Name="articledetail">
+    <Key>
+      <PropertyRef Name="articledetail_id" />
+    </Key>
+    <Property Name="articledetail_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subsection_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="is_delete_articledetail" Type="Boolean" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_ARTICLED_RELATIONS_ARTICLE" FromRole="articledetail" ToRole="article" />
+    <NavigationProperty Name="subsection" Relationship="storeModel.FK_ARTICLED_RELATIONS_SUBSECTI" FromRole="articledetail" ToRole="subsection" />
+    <NavigationProperty Name="banner" Relationship="storeModel.FK_BANNER_RELATIONS_ARTICLED" FromRole="articledetail" ToRole="banner" />
+    <NavigationProperty Name="bestarticle" Relationship="storeModel.FK_BESTARTI_RELATIONS_ARTICLED" FromRole="articledetail" ToRole="bestarticle" />
+  </EntityType>
+  <EntityType Name="articlerelational">
+    <Key>
+      <PropertyRef Name="articlerelational_id" />
+    </Key>
+    <Property Name="articlerelational_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bussine_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="is_delete_articlerelational" Type="Boolean" />
+    <Property Name="art_article_id" Type="Int32" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_ARTICLER_RELATIONS_ARTICLE" FromRole="articlerelational" ToRole="article" />
+    <NavigationProperty Name="bussine" Relationship="storeModel.FK_ARTICLER_RELATIONS_BUSSINE" FromRole="articlerelational" ToRole="bussine" />
+  </EntityType>
+  <EntityType Name="banner">
+    <Key>
+      <PropertyRef Name="banner_id" />
+    </Key>
+    <Property Name="banner_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="articledetail_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="tittle_banner" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="detall_banner" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="name_image_banner" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="start_banner" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="end_banner" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="url_banner" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type_banner" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="is_delete_banner" Type="Boolean" />
+    <NavigationProperty Name="articledetail" Relationship="storeModel.FK_BANNER_RELATIONS_ARTICLED" FromRole="banner" ToRole="articledetail" />
+  </EntityType>
+  <EntityType Name="bestarticle">
+    <Key>
+      <PropertyRef Name="bestarticle_id" />
+    </Key>
+    <Property Name="bestarticle_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="articledetail_id" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="articledetail" Relationship="storeModel.FK_BESTARTI_RELATIONS_ARTICLED" FromRole="bestarticle" ToRole="articledetail" />
+  </EntityType>
+  <EntityType Name="box">
+    <Key>
+      <PropertyRef Name="box_id" />
+    </Key>
+    <Property Name="box_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bussine_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="user_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="name_box" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="code_box" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="is_select_box" Type="Boolean" />
+    <Property Name="is_delete_box" Type="Boolean" />
+    <NavigationProperty Name="bussine" Relationship="storeModel.FK_BOX_RELATIONS_BUSSINE" FromRole="box" ToRole="bussine" />
+    <NavigationProperty Name="user" Relationship="storeModel.FK_BOX_RELATIONS_USER" FromRole="box" ToRole="user" />
+    <NavigationProperty Name="listproduct" Relationship="storeModel.FK_LISTPROD_RELATIONS_BOX" FromRole="box" ToRole="listproduct" />
+  </EntityType>
+  <EntityType Name="bussine">
+    <Key>
+      <PropertyRef Name="bussine_id" />
+    </Key>
+    <Property Name="bussine_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_bu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="articlerelational" Relationship="storeModel.FK_ARTICLER_RELATIONS_BUSSINE" FromRole="bussine" ToRole="articlerelational" />
+    <NavigationProperty Name="box" Relationship="storeModel.FK_BOX_RELATIONS_BUSSINE" FromRole="bussine" ToRole="box" />
+    <NavigationProperty Name="groupproduct" Relationship="storeModel.FK_GROUPPRO_RELATIONS_BUSSINE" FromRole="bussine" ToRole="groupproduct" />
+    <NavigationProperty Name="reviewarticle" Relationship="storeModel.FK_REVIEWAR_RELATIONS_BUSSINE" FromRole="bussine" ToRole="reviewarticle" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="comment_id" />
+    </Key>
+    <Property Name="comment_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="user_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="date_comment" Type="DateTime" Precision="3" />
+    <Property Name="name_comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="rating" Type="Int32" />
+    <Property Name="is_delete_comment" Type="Boolean" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_COMMENT_RELATIONS_ARTICLE" FromRole="comment" ToRole="article" />
+    <NavigationProperty Name="user" Relationship="storeModel.FK_COMMENT_RELATIONS_USER" FromRole="comment" ToRole="user" />
+  </EntityType>
+  <EntityType Name="descriptionarticle">
+    <Key>
+      <PropertyRef Name="descriptionarticle_id" />
+    </Key>
+    <Property Name="descriptionarticle_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="name_descriptionarticle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_DESCRIPT_RELATIONS_ARTICLE" FromRole="descriptionarticle" ToRole="article" />
+  </EntityType>
+  <EntityType Name="groupproduct">
+    <Key>
+      <PropertyRef Name="group_id" />
+    </Key>
+    <Property Name="group_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bussine_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="name_group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="is_delete_group" Type="Boolean" />
+    <NavigationProperty Name="bussine" Relationship="storeModel.FK_GROUPPRO_RELATIONS_BUSSINE" FromRole="groupproduct" ToRole="bussine" />
+    <NavigationProperty Name="section" Relationship="storeModel.FK_SECTION_RELATIONS_GROUPPRO" FromRole="groupproduct" ToRole="section" />
+  </EntityType>
+  <EntityType Name="imagearticle">
+    <Key>
+      <PropertyRef Name="image_article_id" />
+    </Key>
+    <Property Name="image_article_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="nombre_image_article" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="size_image_article" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="type_image_article" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="is_delete_article" Type="Boolean" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_IMAGEART_RELATIONS_ARTICLE" FromRole="imagearticle" ToRole="article" />
+  </EntityType>
+  <EntityType Name="information">
+    <Key>
+      <PropertyRef Name="information_id" />
+    </Key>
+    <Property Name="information_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="name_information" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="detail_information" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="is_delete_information" Type="Boolean" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_INFORMAT_RELATIONS_ARTICLE" FromRole="information" ToRole="article" />
+  </EntityType>
+  <EntityType Name="listproduct">
+    <Key>
+      <PropertyRef Name="list_product_id" />
+    </Key>
+    <Property Name="list_product_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="box_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="num_product" Type="Int32" />
+    <Property Name="is_delete_list_product" Type="Boolean" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_LISTPROD_RELATIONS_ARTICLE" FromRole="listproduct" ToRole="article" />
+    <NavigationProperty Name="box" Relationship="storeModel.FK_LISTPROD_RELATIONS_BOX" FromRole="listproduct" ToRole="box" />
+  </EntityType>
+  <EntityType Name="reviewarticle">
+    <Key>
+      <PropertyRef Name="reviewarticle_id" />
+    </Key>
+    <Property Name="reviewarticle_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="bussine_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="is_delete_reviewarticle" Type="Boolean" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_REVIEWAR_RELATIONS_ARTICLE" FromRole="reviewarticle" ToRole="article" />
+    <NavigationProperty Name="bussine" Relationship="storeModel.FK_REVIEWAR_RELATIONS_BUSSINE" FromRole="reviewarticle" ToRole="bussine" />
+  </EntityType>
+  <EntityType Name="section">
+    <Key>
+      <PropertyRef Name="section_id" />
+    </Key>
+    <Property Name="section_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="name_section" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="is_delete_section" Type="Boolean" />
+    <NavigationProperty Name="groupproduct" Relationship="storeModel.FK_SECTION_RELATIONS_GROUPPRO" FromRole="section" ToRole="groupproduct" />
+    <NavigationProperty Name="subsection" Relationship="storeModel.FK_SUBSECTI_RELATIONS_SECTION" FromRole="section" ToRole="subsection" />
+  </EntityType>
+  <EntityType Name="stockarticle">
+    <Key>
+      <PropertyRef Name="stockarticle_id" />
+    </Key>
+    <Property Name="stockarticle_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="article_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="fecha_start_stockarticle" Type="DateTime" Precision="3" />
+    <Property Name="fecha_end_stockarticle" Type="DateTime" Precision="3" />
+    <Property Name="queantity_stockarticle" Type="Int32" />
+    <Property Name="detail_stockarticle" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="number_actuali_stockarticle" Type="Int32" />
+    <Property Name="provider_stockarticle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="code_stockarticle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="date_add_stockarticle" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="article" Relationship="storeModel.FK_STOCKART_RELATIONS_ARTICLE" FromRole="stockarticle" ToRole="article" />
+  </EntityType>
+  <EntityType Name="subsection">
+    <Key>
+      <PropertyRef Name="subsection_id" />
+    </Key>
+    <Property Name="subsection_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="section_id" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="name_sub_section" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="is_delete_sub_section" Type="Boolean" />
+    <NavigationProperty Name="articledetail" Relationship="storeModel.FK_ARTICLED_RELATIONS_SUBSECTI" FromRole="subsection" ToRole="articledetail" />
+    <NavigationProperty Name="section" Relationship="storeModel.FK_SUBSECTI_RELATIONS_SECTION" FromRole="subsection" ToRole="section" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firt_name_user" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="last_name_user" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email_user" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password_user" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="type_user" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="imagen_user" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="token_user" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="code_user" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="box" Relationship="storeModel.FK_BOX_RELATIONS_USER" FromRole="user" ToRole="box" />
+    <NavigationProperty Name="comment" Relationship="storeModel.FK_COMMENT_RELATIONS_USER" FromRole="user" ToRole="comment" />
+  </EntityType>
+  <Association Name="FK_ARTICLED_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.articledetail" Role="articledetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="articledetail">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ARTICLER_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.articlerelational" Role="articlerelational" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="articlerelational">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMENT_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.comment" Role="comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="comment">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESCRIPT_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.descriptionarticle" Role="descriptionarticle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="descriptionarticle">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IMAGEART_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.imagearticle" Role="imagearticle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="imagearticle">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INFORMAT_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.information" Role="information" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="information">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LISTPROD_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.listproduct" Role="listproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="listproduct">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REVIEWAR_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.reviewarticle" Role="reviewarticle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="reviewarticle">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_STOCKART_RELATIONS_ARTICLE">
+    <End Type="storeModel.article" Role="article" Multiplicity="0..1" />
+    <End Type="storeModel.stockarticle" Role="stockarticle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="article">
+        <PropertyRef Name="article_id" />
+      </Principal>
+      <Dependent Role="stockarticle">
+        <PropertyRef Name="article_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ARTICLED_RELATIONS_SUBSECTI">
+    <End Type="storeModel.subsection" Role="subsection" Multiplicity="0..1" />
+    <End Type="storeModel.articledetail" Role="articledetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subsection">
+        <PropertyRef Name="subsection_id" />
+      </Principal>
+      <Dependent Role="articledetail">
+        <PropertyRef Name="subsection_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BANNER_RELATIONS_ARTICLED">
+    <End Type="storeModel.articledetail" Role="articledetail" Multiplicity="0..1" />
+    <End Type="storeModel.banner" Role="banner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="articledetail">
+        <PropertyRef Name="articledetail_id" />
+      </Principal>
+      <Dependent Role="banner">
+        <PropertyRef Name="articledetail_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BESTARTI_RELATIONS_ARTICLED">
+    <End Type="storeModel.articledetail" Role="articledetail" Multiplicity="0..1" />
+    <End Type="storeModel.bestarticle" Role="bestarticle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="articledetail">
+        <PropertyRef Name="articledetail_id" />
+      </Principal>
+      <Dependent Role="bestarticle">
+        <PropertyRef Name="articledetail_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ARTICLER_RELATIONS_BUSSINE">
+    <End Type="storeModel.bussine" Role="bussine" Multiplicity="0..1" />
+    <End Type="storeModel.articlerelational" Role="articlerelational" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bussine">
+        <PropertyRef Name="bussine_id" />
+      </Principal>
+      <Dependent Role="articlerelational">
+        <PropertyRef Name="bussine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BOX_RELATIONS_BUSSINE">
+    <End Type="storeModel.bussine" Role="bussine" Multiplicity="0..1" />
+    <End Type="storeModel.box" Role="box" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bussine">
+        <PropertyRef Name="bussine_id" />
+      </Principal>
+      <Dependent Role="box">
+        <PropertyRef Name="bussine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BOX_RELATIONS_USER">
+    <End Type="storeModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="storeModel.box" Role="box" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="box">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LISTPROD_RELATIONS_BOX">
+    <End Type="storeModel.box" Role="box" Multiplicity="0..1" />
+    <End Type="storeModel.listproduct" Role="listproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="box">
+        <PropertyRef Name="box_id" />
+      </Principal>
+      <Dependent Role="listproduct">
+        <PropertyRef Name="box_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GROUPPRO_RELATIONS_BUSSINE">
+    <End Type="storeModel.bussine" Role="bussine" Multiplicity="0..1" />
+    <End Type="storeModel.groupproduct" Role="groupproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bussine">
+        <PropertyRef Name="bussine_id" />
+      </Principal>
+      <Dependent Role="groupproduct">
+        <PropertyRef Name="bussine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REVIEWAR_RELATIONS_BUSSINE">
+    <End Type="storeModel.bussine" Role="bussine" Multiplicity="0..1" />
+    <End Type="storeModel.reviewarticle" Role="reviewarticle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bussine">
+        <PropertyRef Name="bussine_id" />
+      </Principal>
+      <Dependent Role="reviewarticle">
+        <PropertyRef Name="bussine_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMMENT_RELATIONS_USER">
+    <End Type="storeModel.user" Role="user" Multiplicity="0..1" />
+    <End Type="storeModel.comment" Role="comment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="comment">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SECTION_RELATIONS_GROUPPRO">
+    <End Type="storeModel.groupproduct" Role="groupproduct" Multiplicity="0..1" />
+    <End Type="storeModel.section" Role="section" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="groupproduct">
+        <PropertyRef Name="group_id" />
+      </Principal>
+      <Dependent Role="section">
+        <PropertyRef Name="group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SUBSECTI_RELATIONS_SECTION">
+    <End Type="storeModel.section" Role="section" Multiplicity="0..1" />
+    <End Type="storeModel.subsection" Role="subsection" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="subsection">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

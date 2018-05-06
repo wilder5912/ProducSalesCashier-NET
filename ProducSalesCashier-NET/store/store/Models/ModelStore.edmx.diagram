@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="84426562a1ec41d18eb1b39503d58ba8" Name="Diagram1" ZoomLevel="55">
+        <EntityTypeShape EntityType="storeModel.article" Width="1.5" PointX="0.75" PointY="15.625" />
+        <EntityTypeShape EntityType="storeModel.articledetail" Width="1.5" PointX="3" PointY="10.5" />
+        <EntityTypeShape EntityType="storeModel.articlerelational" Width="1.5" PointX="6" PointY="20.625" />
+        <EntityTypeShape EntityType="storeModel.banner" Width="1.5" PointX="5.25" PointY="4.5" />
+        <EntityTypeShape EntityType="storeModel.bestarticle" Width="1.5" PointX="5.25" PointY="9.125" />
+        <EntityTypeShape EntityType="storeModel.box" Width="1.5" PointX="3.75" PointY="29.375" />
+        <EntityTypeShape EntityType="storeModel.bussine" Width="1.5" PointX="1.5" PointY="0.75" />
+        <EntityTypeShape EntityType="storeModel.comment" Width="1.5" PointX="3" PointY="14.5" />
+        <EntityTypeShape EntityType="storeModel.descriptionarticle" Width="1.5" PointX="3" PointY="37.875" />
+        <EntityTypeShape EntityType="storeModel.groupproduct" Width="1.5" PointX="1.5" PointY="3.75" />
+        <EntityTypeShape EntityType="storeModel.imagearticle" Width="1.5" PointX="3" PointY="25.375" />
+        <EntityTypeShape EntityType="storeModel.information" Width="1.5" PointX="3" PointY="40.375" />
+        <EntityTypeShape EntityType="storeModel.listproduct" Width="1.5" PointX="6" PointY="16.625" />
+        <EntityTypeShape EntityType="storeModel.reviewarticle" Width="1.5" PointX="6" PointY="13.75" />
+        <EntityTypeShape EntityType="storeModel.section" Width="1.5" PointX="1.5" PointY="6.75" />
+        <EntityTypeShape EntityType="storeModel.stockarticle" Width="1.5" PointX="3" PointY="18.625" />
+        <EntityTypeShape EntityType="storeModel.subsection" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="storeModel.user" Width="1.5" PointX="0.75" PointY="21.25" />
+        <AssociationConnector Association="storeModel.FK_ARTICLED_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_ARTICLER_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_COMMENT_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_DESCRIPT_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_IMAGEART_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_INFORMAT_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_LISTPROD_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_REVIEWAR_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_STOCKART_RELATIONS_ARTICLE" />
+        <AssociationConnector Association="storeModel.FK_ARTICLED_RELATIONS_SUBSECTI" />
+        <AssociationConnector Association="storeModel.FK_BANNER_RELATIONS_ARTICLED" />
+        <AssociationConnector Association="storeModel.FK_BESTARTI_RELATIONS_ARTICLED" />
+        <AssociationConnector Association="storeModel.FK_ARTICLER_RELATIONS_BUSSINE" />
+        <AssociationConnector Association="storeModel.FK_BOX_RELATIONS_BUSSINE" />
+        <AssociationConnector Association="storeModel.FK_BOX_RELATIONS_USER" />
+        <AssociationConnector Association="storeModel.FK_LISTPROD_RELATIONS_BOX" />
+        <AssociationConnector Association="storeModel.FK_GROUPPRO_RELATIONS_BUSSINE" />
+        <AssociationConnector Association="storeModel.FK_REVIEWAR_RELATIONS_BUSSINE" />
+        <AssociationConnector Association="storeModel.FK_COMMENT_RELATIONS_USER" />
+        <AssociationConnector Association="storeModel.FK_SECTION_RELATIONS_GROUPPRO" />
+        <AssociationConnector Association="storeModel.FK_SUBSECTI_RELATIONS_SECTION" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

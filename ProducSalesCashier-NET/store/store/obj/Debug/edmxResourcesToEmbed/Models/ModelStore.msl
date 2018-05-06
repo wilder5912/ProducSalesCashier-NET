@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="storeModelStoreContainer" CdmEntityContainer="storeEntities">
+    <EntitySetMapping Name="article">
+      <EntityTypeMapping TypeName="storeModel.article">
+        <MappingFragment StoreEntitySet="article">
+          <ScalarProperty Name="is_delete_ar" ColumnName="is_delete_ar" />
+          <ScalarProperty Name="is_discount_ar" ColumnName="is_discount_ar" />
+          <ScalarProperty Name="per_discount_ar" ColumnName="per_discount_ar" />
+          <ScalarProperty Name="image_main_ar" ColumnName="image_main_ar" />
+          <ScalarProperty Name="detail_ar" ColumnName="detail_ar" />
+          <ScalarProperty Name="precy_ar" ColumnName="precy_ar" />
+          <ScalarProperty Name="codigo_ar" ColumnName="codigo_ar" />
+          <ScalarProperty Name="name_ar" ColumnName="name_ar" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articledetail">
+      <EntityTypeMapping TypeName="storeModel.articledetail">
+        <MappingFragment StoreEntitySet="articledetail">
+          <ScalarProperty Name="is_delete_articledetail" ColumnName="is_delete_articledetail" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="subsection_id" ColumnName="subsection_id" />
+          <ScalarProperty Name="articledetail_id" ColumnName="articledetail_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="articlerelational">
+      <EntityTypeMapping TypeName="storeModel.articlerelational">
+        <MappingFragment StoreEntitySet="articlerelational">
+          <ScalarProperty Name="art_article_id" ColumnName="art_article_id" />
+          <ScalarProperty Name="is_delete_articlerelational" ColumnName="is_delete_articlerelational" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="bussine_id" ColumnName="bussine_id" />
+          <ScalarProperty Name="articlerelational_id" ColumnName="articlerelational_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="banner">
+      <EntityTypeMapping TypeName="storeModel.banner">
+        <MappingFragment StoreEntitySet="banner">
+          <ScalarProperty Name="is_delete_banner" ColumnName="is_delete_banner" />
+          <ScalarProperty Name="type_banner" ColumnName="type_banner" />
+          <ScalarProperty Name="url_banner" ColumnName="url_banner" />
+          <ScalarProperty Name="end_banner" ColumnName="end_banner" />
+          <ScalarProperty Name="start_banner" ColumnName="start_banner" />
+          <ScalarProperty Name="name_image_banner" ColumnName="name_image_banner" />
+          <ScalarProperty Name="detall_banner" ColumnName="detall_banner" />
+          <ScalarProperty Name="tittle_banner" ColumnName="tittle_banner" />
+          <ScalarProperty Name="articledetail_id" ColumnName="articledetail_id" />
+          <ScalarProperty Name="banner_id" ColumnName="banner_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bestarticle">
+      <EntityTypeMapping TypeName="storeModel.bestarticle">
+        <MappingFragment StoreEntitySet="bestarticle">
+          <ScalarProperty Name="articledetail_id" ColumnName="articledetail_id" />
+          <ScalarProperty Name="bestarticle_id" ColumnName="bestarticle_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="box">
+      <EntityTypeMapping TypeName="storeModel.box">
+        <MappingFragment StoreEntitySet="box">
+          <ScalarProperty Name="is_delete_box" ColumnName="is_delete_box" />
+          <ScalarProperty Name="is_select_box" ColumnName="is_select_box" />
+          <ScalarProperty Name="code_box" ColumnName="code_box" />
+          <ScalarProperty Name="name_box" ColumnName="name_box" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="bussine_id" ColumnName="bussine_id" />
+          <ScalarProperty Name="box_id" ColumnName="box_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bussine">
+      <EntityTypeMapping TypeName="storeModel.bussine">
+        <MappingFragment StoreEntitySet="bussine">
+          <ScalarProperty Name="name_bu" ColumnName="name_bu" />
+          <ScalarProperty Name="bussine_id" ColumnName="bussine_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comment">
+      <EntityTypeMapping TypeName="storeModel.comment">
+        <MappingFragment StoreEntitySet="comment">
+          <ScalarProperty Name="is_delete_comment" ColumnName="is_delete_comment" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="name_comment" ColumnName="name_comment" />
+          <ScalarProperty Name="date_comment" ColumnName="date_comment" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="comment_id" ColumnName="comment_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="descriptionarticle">
+      <EntityTypeMapping TypeName="storeModel.descriptionarticle">
+        <MappingFragment StoreEntitySet="descriptionarticle">
+          <ScalarProperty Name="name_descriptionarticle" ColumnName="name_descriptionarticle" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="descriptionarticle_id" ColumnName="descriptionarticle_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="groupproduct">
+      <EntityTypeMapping TypeName="storeModel.groupproduct">
+        <MappingFragment StoreEntitySet="groupproduct">
+          <ScalarProperty Name="is_delete_group" ColumnName="is_delete_group" />
+          <ScalarProperty Name="name_group" ColumnName="name_group" />
+          <ScalarProperty Name="bussine_id" ColumnName="bussine_id" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="imagearticle">
+      <EntityTypeMapping TypeName="storeModel.imagearticle">
+        <MappingFragment StoreEntitySet="imagearticle">
+          <ScalarProperty Name="is_delete_article" ColumnName="is_delete_article" />
+          <ScalarProperty Name="type_image_article" ColumnName="type_image_article" />
+          <ScalarProperty Name="size_image_article" ColumnName="size_image_article" />
+          <ScalarProperty Name="nombre_image_article" ColumnName="nombre_image_article" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="image_article_id" ColumnName="image_article_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="information">
+      <EntityTypeMapping TypeName="storeModel.information">
+        <MappingFragment StoreEntitySet="information">
+          <ScalarProperty Name="is_delete_information" ColumnName="is_delete_information" />
+          <ScalarProperty Name="detail_information" ColumnName="detail_information" />
+          <ScalarProperty Name="name_information" ColumnName="name_information" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="information_id" ColumnName="information_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="listproduct">
+      <EntityTypeMapping TypeName="storeModel.listproduct">
+        <MappingFragment StoreEntitySet="listproduct">
+          <ScalarProperty Name="is_delete_list_product" ColumnName="is_delete_list_product" />
+          <ScalarProperty Name="num_product" ColumnName="num_product" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="box_id" ColumnName="box_id" />
+          <ScalarProperty Name="list_product_id" ColumnName="list_product_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reviewarticle">
+      <EntityTypeMapping TypeName="storeModel.reviewarticle">
+        <MappingFragment StoreEntitySet="reviewarticle">
+          <ScalarProperty Name="is_delete_reviewarticle" ColumnName="is_delete_reviewarticle" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="bussine_id" ColumnName="bussine_id" />
+          <ScalarProperty Name="reviewarticle_id" ColumnName="reviewarticle_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="section">
+      <EntityTypeMapping TypeName="storeModel.section">
+        <MappingFragment StoreEntitySet="section">
+          <ScalarProperty Name="is_delete_section" ColumnName="is_delete_section" />
+          <ScalarProperty Name="name_section" ColumnName="name_section" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stockarticle">
+      <EntityTypeMapping TypeName="storeModel.stockarticle">
+        <MappingFragment StoreEntitySet="stockarticle">
+          <ScalarProperty Name="date_add_stockarticle" ColumnName="date_add_stockarticle" />
+          <ScalarProperty Name="code_stockarticle" ColumnName="code_stockarticle" />
+          <ScalarProperty Name="provider_stockarticle" ColumnName="provider_stockarticle" />
+          <ScalarProperty Name="number_actuali_stockarticle" ColumnName="number_actuali_stockarticle" />
+          <ScalarProperty Name="detail_stockarticle" ColumnName="detail_stockarticle" />
+          <ScalarProperty Name="queantity_stockarticle" ColumnName="queantity_stockarticle" />
+          <ScalarProperty Name="fecha_end_stockarticle" ColumnName="fecha_end_stockarticle" />
+          <ScalarProperty Name="fecha_start_stockarticle" ColumnName="fecha_start_stockarticle" />
+          <ScalarProperty Name="article_id" ColumnName="article_id" />
+          <ScalarProperty Name="stockarticle_id" ColumnName="stockarticle_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subsection">
+      <EntityTypeMapping TypeName="storeModel.subsection">
+        <MappingFragment StoreEntitySet="subsection">
+          <ScalarProperty Name="is_delete_sub_section" ColumnName="is_delete_sub_section" />
+          <ScalarProperty Name="name_sub_section" ColumnName="name_sub_section" />
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="subsection_id" ColumnName="subsection_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="storeModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="code_user" ColumnName="code_user" />
+          <ScalarProperty Name="token_user" ColumnName="token_user" />
+          <ScalarProperty Name="imagen_user" ColumnName="imagen_user" />
+          <ScalarProperty Name="type_user" ColumnName="type_user" />
+          <ScalarProperty Name="password_user" ColumnName="password_user" />
+          <ScalarProperty Name="email_user" ColumnName="email_user" />
+          <ScalarProperty Name="last_name_user" ColumnName="last_name_user" />
+          <ScalarProperty Name="firt_name_user" ColumnName="firt_name_user" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

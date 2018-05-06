@@ -38,3 +38,7 @@ D:\instaladores\net\projectoOfSell\ProducSalesCashier-NET\store\store\bin\Newton
 D:\instaladores\net\projectoOfSell\ProducSalesCashier-NET\store\store\obj\Debug\store.csprojResolveAssemblyReference.cache
 D:\instaladores\net\projectoOfSell\ProducSalesCashier-NET\store\store\obj\Debug\store.dll
 D:\instaladores\net\projectoOfSell\ProducSalesCashier-NET\store\store\obj\Debug\store.pdb
+D:\instaladores\net\projectoOfSell\ProducSalesCashier-NET\store\store\bin\EntityFramework.dll
+D:\instaladores\net\projectoOfSell\ProducSalesCashier-NET\store\store\bin\EntityFramework.SqlServer.dll
+D:\instaladores\net\projectoOfSell\ProducSalesCashier-NET\store\store\bin\EntityFramework.xml
+D:\instaladores\net\projectoOfSell\ProducSalesCashier-NET\store\store\bin\EntityFramework.SqlServer.xml
