@@ -1,0 +1,15 @@
+﻿ 
+@{
+    ViewBag.Title = "Autentificado";
+}
+
+@if (Helper.SessionHelper.ExistUserInSession())
+{
+    <p>Tenemos un usuario en sesión, su ID es @Helper.SessionHelper.GetUser()</p>
+    <a href="~/Login/Logout">Click para matar su sesión</a>
+}
+else
+{
+    <p>No tenemos a nadie logeado</p>
+    <a href="~/Login">Volver al login</a>
+}
